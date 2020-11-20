@@ -18,11 +18,11 @@ steps:
 - script: |
     npm install
     npm test
-    npm run build
-  displayName: 'npm install, test and build'
+    npm start
+  displayName: 'npm start and build'
 
 - task: PublishTestResults@2
   condition: succeededOrFailed()
-  inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/TEST-RESULTS.xml'
+  #inputs:
+    #testRunner: JUnit
+    #testResultsFiles: '**/TEST-RESULTS.xml'
