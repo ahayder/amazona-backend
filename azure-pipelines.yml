@@ -20,8 +20,8 @@ steps:
     npm test
   displayName: 'npm start and build'
 
-- task: PublishTestResults@2
+- task: PublishTestResults@1
   condition: succeededOrFailed()
-  #inputs:
-    #testRunner: JUnit
-    #testResultsFiles: '**/TEST-RESULTS.xml'
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/test-report.xml'
