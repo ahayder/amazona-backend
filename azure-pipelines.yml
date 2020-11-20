@@ -18,7 +18,6 @@ steps:
 - script: |
     npm install
     npm test
-    npm start
   displayName: 'npm start and build'
 
 - task: PublishTestResults@2
